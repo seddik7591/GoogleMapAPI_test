@@ -1,0 +1,49 @@
+<!-- seddik7591@gmail.com
+My API Key: AIzaSyAvLwPJyNquacGLvSW5veON0u4tb5CmC6U
+Should be changed for other projects -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Map API Test</title>
+	<style>
+        /* Set the size of the div element that contains the map */
+        #map {
+           height: 400px;
+           /* The height is 400 pixels */
+           width: 100%;
+           /* The width is the width of the web page */
+        }
+      </style>
+</head>
+<body>
+
+  <h1>My Google Map API Test</h1>
+  <div id="map"></div>
+
+<script>
+	// seddik7591@gmail.com
+
+	// Initialize and add the map
+	function initMap() {
+	  // The location of Digital Solutions
+	  const digital_solutions_position = { lat: 35.134483, lng: -0.622745 };
+	  // The map, centered at Digital Solutions
+	  const map = new google.maps.Map(document.getElementById("map"), {
+	    zoom: 15,
+	    center: digital_solutions_position,
+	  });
+	  // The marker, positioned at Digital Solutions
+	  const marker = new google.maps.Marker({
+	    position: digital_solutions_position,
+	    map: map,
+	  });
+	}
+</script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvLwPJyNquacGLvSW5veON0u4tb5CmC6U&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+</body>
+</html>
